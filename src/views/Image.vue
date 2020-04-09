@@ -11,6 +11,7 @@ export default {
     ipcRenderer.on('image', (event, arg) => {
       console.log(arg)
       this.imageUrl = arg
+      this.$router.push('/')
     })
   },
   data() {

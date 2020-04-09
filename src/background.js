@@ -1,6 +1,8 @@
 'use strict'
 
 import { app, protocol, BrowserWindow, ipcMain, Menu } from 'electron'
+import path from "path"
+import url from "url"
 import {
   createProtocol,
   installVueDevtools
@@ -32,7 +34,7 @@ function createWindow () {
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
-    image.loadURL(process.env.WEBPACK_DEV_SERVER_URL + 'image')
+    win.loadURL(path.join(__dirname, 'image' + to));
     if (!process.env.IS_TEST) win.webContents.openDevTools()
   } else {
     createProtocol('app')

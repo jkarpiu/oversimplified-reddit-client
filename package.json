@@ -12,6 +12,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "ts-loader": "^6.2.2",
     "vue": "^2.6.11",
